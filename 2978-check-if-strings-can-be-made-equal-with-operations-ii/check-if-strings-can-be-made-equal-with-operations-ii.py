@@ -4,7 +4,7 @@ class Solution:
         a,b,c,d=[],[],[],[]
         
         for i in range(k):
-            if i%2==0:
+            if i&1:
                 a.append(s1[i])
                 b.append(s2[i])
             else:
