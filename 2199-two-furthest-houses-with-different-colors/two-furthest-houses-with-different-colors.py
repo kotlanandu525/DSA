@@ -1,10 +1,9 @@
 class Solution:
     def maxDistance(self, colors: List[int]) -> int:
-        
+        n=len(colors)
         ans=0
-        for i in range(len(colors)):
-            c=colors[i]
-            for j in range(i+1,len(colors)):
-                if c!=colors[j]:
-                    ans=max(ans,abs(i-j))
+        for i in range(n):
+            if colors[i]!=colors[0]: ans=max(ans,i)
+            if  colors[i]!=colors[-1]: ans=max(ans,n-i-1)
+            
         return ans
