@@ -1,9 +1,9 @@
 class Solution:
     def asteroidsDestroyed(self, mass: int, asteroids: List[int]) -> bool:
-        asteroids.sort()
+        asteroid=sorted(asteroids)
         for i in range(len(asteroids)):
-            if mass>=asteroids[i]:
-                mass+=asteroids[i]
+            if mass>=asteroid[i]:
+                mass+=asteroid[i]
             else:
                 return False
         return True
