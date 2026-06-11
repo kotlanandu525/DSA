@@ -6,5 +6,5 @@ class Solution:
             if s[sp]==t[tp]:
                 sp+=1
             tp+=1
-        return True if len(s)==sp else False
+        return  len(s)==sp 
             
