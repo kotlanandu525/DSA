@@ -10,9 +10,14 @@ class Solution:
                 odd.append(nums[i])
         even.sort()
         odd.sort(reverse=True)
-        for i in range(min(len(even),len(odd))):
-            ans.append(even[i])
-            ans.append(odd[i])
-        if len(ans)!=len(nums):
-            ans.append(even[-1])
+        e=0
+        o=0
+        for i in range(len(nums)):
+            if i%2==0:
+                ans.append(even[e])
+                e+=1
+            else:
+                ans.append(odd[o])
+                o+=1
+            
         return ans
