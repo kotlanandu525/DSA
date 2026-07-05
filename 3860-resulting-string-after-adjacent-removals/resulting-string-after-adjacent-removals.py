@@ -3,7 +3,7 @@ class Solution:
         
         st=[]
         for ch in s:
-            if st and (abs(ord(st[-1])-ord(ch))==1 or abs(ord(st[-1])-ord(ch))==25):
+            if st and (abs(ord(st[-1])-ord(ch)) in (1,25)):
                 st.pop()
             else:
                 st.append(ch)
