@@ -3,9 +3,10 @@ class Solution:
         
         st=[]
         for ch in s:
-            if st:
-                if abs(ord(st[-1])-ord(ch))==1 or abs(ord(st[-1])-ord(ch))==25:
-                    st.pop()
-                    continue
-            st.append(ch)
+            if st and (abs(ord(st[-1])-ord(ch))==1 or abs(ord(st[-1])-ord(ch))==25):
+                st.pop()
+            else:
+                st.append(ch)
+            
+                
         return "".join(st)
