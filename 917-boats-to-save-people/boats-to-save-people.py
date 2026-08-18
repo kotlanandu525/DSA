@@ -7,12 +7,8 @@ class Solution:
         j=n-1
         while i<=j:
             s=nums[i]+nums[j]
-            if i==j:
-                if nums[i]<=limit:
-                    c+=1
-                    i+=1
-                    j-=1
-            elif s<=limit:
+            
+            if s<=limit:
                 c+=1
                 j-=1
                 i+=1
